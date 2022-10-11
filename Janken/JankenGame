@@ -15,6 +15,7 @@ public class Cachibom {
         while (true) {
             System.out.println("Enter your move. Type in rock, paper or scissors. To exit game, type in quit. ");
         String myMove = in.nextLine();
+        
         // Kontrollerar ifall användare skriver in quit
         if (myMove.equals("quit")) {
             break;
@@ -27,22 +28,20 @@ public class Cachibom {
 
         // Random nummer ( 0, 1, 2)
             int rand = (int) (Math.random() * 3);
-            String opponentMove = "";
+            String aIMove = "";
             if (rand == 0) {
-                opponentMove = "rock";
+                aIMove = "rock";
             } else if (rand == 1) {
-                opponentMove = "paper";
+                aIMove = "paper";
             } else {
-                opponentMove = "scissors";
+                aIMove = "scissors";
             }
-            System.out.println("Opponent move: " + opponentMove);
+            System.out.println("AI move: " + aIMove);
        
         // Se över ifall avnändaren vann, förlora eller oavgjort
-        if (myMove.equals(opponentMove)) {
+        if (myMove.equals(aIMove)) {
             System.out.println("You tied");
-        } else if ((myMove.equals("rock") && opponentMove.equals("scissors")) || 
-        (myMove.equals("paper") && opponentMove.equals
-        ("rock"))) { 
+        } else if ((myMove.equals("rock") && aIMove.equals("scissors")) || (myMove.equals("paper") && aIMove.equals("rock"))) { 
             System.out.println("You win!");
             wins++;
         } else {
