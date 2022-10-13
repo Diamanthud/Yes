@@ -9,16 +9,13 @@ public class Player {
         this.name = name;
         this.score = score;
     }
-
     public String getName() {
         return name;
     }
-
     public void rageQuit() {
         System.exit(0);
     }
 
-    @Override
     public String toString() {
         return "this name" + this.name + ", Score" + this.score;
     }
