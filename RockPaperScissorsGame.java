@@ -1,6 +1,5 @@
 package game;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 // TESTAR
 public class RockPaperScissorsGame {
@@ -16,7 +15,7 @@ public class RockPaperScissorsGame {
     public static void main(String[] args) {
         RockPaperScissorsGame game = new RockPaperScissorsGame("", 0);
         game.playGame();
-        // aIFist.play()
+        aIFist.play();
     }
 
     void playGame() {
@@ -41,7 +40,8 @@ public class RockPaperScissorsGame {
                 stringResult = "PAPER";
             }
             
-            //  System.out.println(stringResult);
+            
+            
             if (intResult == Fist.SCISSORS) {
                 stringResult = "SCISSORS";
             }
