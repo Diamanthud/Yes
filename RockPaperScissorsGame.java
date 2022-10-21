@@ -15,7 +15,9 @@ public class RockPaperScissorsGame {
     public static void main(String[] args) {
         RockPaperScissorsGame game = new RockPaperScissorsGame("", 0);
         game.playGame();
-        aIFist.play();
+
+        //@FIXME: works if you call game.aiFist.play() instead
+        game.aIFist.play();
     }
 
     void playGame() {
